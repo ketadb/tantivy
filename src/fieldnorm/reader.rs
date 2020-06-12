@@ -57,6 +57,10 @@ impl FieldNormReader {
         FieldNormReader { data }
     }
 
+    pub fn num_docs(&self) -> u32 {
+        self.data.len() as u32
+    }
+
     /// Returns the `fieldnorm` associated to a doc id.
     /// The fieldnorm is a value approximating the number
     /// of tokens in a given field of the `doc_id`.

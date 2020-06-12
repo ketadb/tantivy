@@ -24,7 +24,7 @@ fn shallow_advance(scorers: &mut Vec<TermScorer>, pivot: DocId) -> Score {
             break;
         }
         scorer.postings.block_cursor.seek(pivot);
-        block_max_score_upperbound += scorer.postings.block_cursor.skip_reader.block_max_score();
+        block_max_score_upperbound += scorer.block_max_score();
     }
     block_max_score_upperbound
 }

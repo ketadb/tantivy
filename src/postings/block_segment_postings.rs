@@ -102,6 +102,10 @@ impl BlockSegmentPostings {
         block_segment_postings
     }
 
+    pub(crate) fn freq_reading_option(&self) -> FreqReadingOption {
+        self.freq_reading_option
+    }
+
     // Resets the block segment postings on another position
     // in the postings file.
     //
